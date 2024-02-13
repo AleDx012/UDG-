@@ -1,0 +1,17 @@
+#include <iostream>
+#include <memory>
+
+class aero {
+public:
+    aero() {
+        std::cout << "Constructor aero\n";
+    }
+    ~aero() {
+        std::cout << "Destructor aero\n";
+    }
+};
+
+int main() {
+    std::unique_ptr<aero> instancia(new aero());
+    return 0;
+}
